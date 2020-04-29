@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_view_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_height_60dp"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_display_video"
+            android:layout_width="@dimen/width_height_40dp"
+            android:layout_height="@dimen/width_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:background="@drawable/touch_effect_button_videos"
+            android:onClick="displayVideosInRecycler" />
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/width_height_40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/indicate_recycler_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/text_size_24sp"
+                android:textStyle="bold"
+                tools:text="Trailers" />
+
+            <ProgressBar
+                android:id="@+id/loading_spinner"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="@dimen/width_height_30dp"
+                android:layout_height="@dimen/width_height_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_toEndOf="@id/indicate_recycler_type" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_display_reviews"
+            android:layout_width="@dimen/width_height_40dp"
+            android:layout_height="@dimen/width_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/touch_effect_button_reviews"
+            android:onClick="displayReviewsInRecycler" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_height_2dp"
+        android:background="@color/dividerColor" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_recyclerview_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <com.example.popularmovies.utils.EmptyRecyclerView
+            android:id="@+id/recycler_view_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingBottom="@dimen/standard_margin"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/secondaryText"
+            tools:text="No Movies Available" />
+    </RelativeLayout>
+
+</LinearLayout>

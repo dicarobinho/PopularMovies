@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/width_height_278dp"
+    android:layout_gravity="center|top">
+
+    <ImageView
+        android:id="@+id/thumbnail_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:layout_width="@dimen/width_height_40dp"
+        android:layout_height="@dimen/width_height_40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/half_half_standard_margin"
+        android:background="@drawable/custom_vote_average_view" />
+
+    <TextView
+        android:id="@+id/vote_average"
+        android:layout_width="@dimen/width_height_40dp"
+        android:layout_height="@dimen/width_height_40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/half_half_standard_margin"
+        android:gravity="center"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_size_22sp"
+        android:textStyle="bold"
+        tools:text="5.0" />
+
+</RelativeLayout>

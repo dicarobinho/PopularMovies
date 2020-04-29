@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/prev_page"
+        android:icon="@drawable/ic_navigate_before"
+        android:orderInCategory="100"
+        android:title="@string/prev_page"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/page"
+        android:orderInCategory="100"
+        android:title="@string/_1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/next_page"
+        android:icon="@drawable/ic_navigate_next_"
+        android:orderInCategory="100"
+        android:title="@string/next_page"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/high_popularity"
+        android:orderInCategory="100"
+        android:title="@string/high_popularity" />
+
+    <item
+        android:id="@+id/high_rated_movies"
+        android:orderInCategory="100"
+        android:title="@string/high_rated_movies" />
+
+    <item
+        android:id="@+id/favorite_movies"
+        android:orderInCategory="100"
+        android:title="@string/my_movies" />
+</menu>

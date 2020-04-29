@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailsActivity">
+
+        <ImageView
+            android:id="@+id/thumbnail_movie"
+            android:layout_width="@dimen/width_height_130dp"
+            android:layout_height="@dimen/width_height_200dp"
+            android:layout_margin="@dimen/standard_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/release_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/double_standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:paddingStart="@dimen/half_standard_margin"
+            android:paddingEnd="@dimen/half_standard_margin"
+            android:textSize="@dimen/text_size_24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/thumbnail_movie"
+            app:layout_constraintTop_toTopOf="@id/thumbnail_movie"
+            android:textColor="@color/primaryText"
+            tools:text="2015" />
+
+        <TextView
+            android:id="@+id/info_release_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/half_standard_margin"
+            android:paddingEnd="@dimen/half_standard_margin"
+            android:textSize="@dimen/text_size_12sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondaryText"
+            app:layout_constraintEnd_toEndOf="@+id/release_year"
+            app:layout_constraintStart_toStartOf="@+id/release_year"
+            app:layout_constraintTop_toBottomOf="@+id/release_year"
+            android:text="@string/release_year" />
+
+        <TextView
+            android:id="@+id/duration_movie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:paddingStart="@dimen/half_standard_margin"
+            android:paddingEnd="@dimen/half_standard_margin"
+            android:textSize="@dimen/text_size_24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/release_year"
+            app:layout_constraintTop_toBottomOf="@+id/info_release_year"
+            android:textColor="@color/primaryText"
+            tools:text="120min" />
+
+        <TextView
+            android:id="@+id/info_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/half_standard_margin"
+            android:paddingEnd="@dimen/half_standard_margin"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/secondaryText"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/release_year"
+            app:layout_constraintTop_toBottomOf="@+id/duration_movie"
+            android:text="@string/duration" />
+
+        <TextView
+            android:id="@+id/vote_average"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:paddingStart="@dimen/half_standard_margin"
+            android:paddingEnd="@dimen/half_standard_margin"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_size_24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/duration_movie"
+            app:layout_constraintTop_toBottomOf="@+id/info_duration"
+            tools:text="8.9/10" />
+
+        <TextView
+            android:id="@+id/info_vote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/half_standard_margin"
+            android:paddingEnd="@dimen/half_standard_margin"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/secondaryText"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/vote_average"
+            app:layout_constraintTop_toBottomOf="@+id/vote_average"
+            android:text="@string/vote_average" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginBottom="@dimen/double_standard_margin"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:paddingBottom="@dimen/standard_margin"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/secondaryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thumbnail_movie"
+            tools:text="This is a description of this movie!" />
+
+        <include
+            android:id="@+id/recycler_view_parent"
+            layout="@layout/recyclerview_videos_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/overview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

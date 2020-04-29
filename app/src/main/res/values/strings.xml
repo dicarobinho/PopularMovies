@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="no_movies_available">No Movies Available</string>
+    <string name="favorite">favorite</string>
+    <string name="error">Image can\'t be deleted!</string>
+    <string name="vote_average">Vote Average</string>
+    <string name="duration">Duration</string>
+    <string name="release_year">Release Year</string>
+    <string name="no_videos_to_display">No Videos to display!</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="error_loading_videos">Error loading Videos!</string>
+    <string name="no_reviews_to_display">No Reviews to display!</string>
+    <string name="min_120">120min</string>
+    <string name="no_description">This movie has no description!</string>
+    <string name="not_specified">not specified</string>
+    <string name="no_app_to_do_this_action">No apps found to do this action!</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="error_loading_reviews">Error loading Reviews!</string>
+    <string name="error_getting_server_data">Error getting server data!</string>
+    <string name="error_loading_movies">Error loading movies!</string>
+    <string name="prev_page">prev page</string>
+    <string name="_1">1</string>
+    <string name="next_page">next page</string>
+    <string name="high_popularity">High popularity</string>
+    <string name="high_rated_movies">High rated movies</string>
+    <string name="my_movies">My Movies</string>
+</resources>
